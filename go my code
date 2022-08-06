@@ -1,0 +1,41 @@
+ALGORITHM task1
+var
+sentence: string[];
+i: int;
+j,k:int:=0;
+begin
+write("donner une phrase");
+read(sentence);
+while (sentence[i]!='.') do
+for i from 0 to sentence.length step 1 do
+if sentence[i]:=' ' then 
+j:=j+1;
+end_if
+if sentence[i] in {'e','o','a','u','i','o','y'} then
+k:=k+1;
+end_if
+end_for
+end_while
+return j,k
+
+/////////////////////////////
+
+ALGORITHM task2
+var
+set1,set2:array_of type[20];
+i,j,sum:int:=0;
+for i from 0 to 20 do
+write("donner les elements des 2 listes")
+read (set1[i],set2[i]);
+end_for
+for i from 0 to set1.length do
+   for j from 0 to set2.length do
+       if set1[i]!=set2[j] then 
+          sum:=set1[i]+set2[j];
+       end_if
+   end_for
+end_for
+return sum
+
+
+
